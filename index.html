@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forge Visuelle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white fixed-top text-center">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-white hide" href="#">Forge <span class="span1"> Visuelle</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-6">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#propos">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services<a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary btn-lg btn-custom shadow-lg border-0" id="myButton">
+                        Cliquer ici
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- section main -->
+        <section id="#home" class="main section">
+            <div class="container ">
+                <div class="row py-5">
+                    <div class="col-md-6 py-5 my-4 section">
+                        <h1 class="fs-2 fw-bol hero-text">Bienvenue dans l’univers de <span
+                                class="text-white fs-1">Forge
+                                <span class="span1"> Visuelle</span></span> — où chaque image raconte, et chaque design
+                            renforce la valeur de votre marque.</h1>
+                        <button class="btn btn-primary shadow bg-body-tertiary btn-lg btn-custom border-0 mt-4"
+                            id="myButton">
+                            Cliquer ici
+                        </button>
+
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/accueil 2.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </header>
+<!-- a propos -->
+    <section id="propos" class="container py-4">
+        <div class="text-center">
+            <h1 class="text-black">A propos</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 py-5">
+                <img src="images/ACCUEIL.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 py-5 ">
+                <h2 class="text-white text-center fw-bolder">Notre vision de l’image</h2>
+                <p>
+                    Chez <strong class="text-white">Forge <span class="span1">Visuelle</span></strong>, chaque image
+                    raconte une histoire. Nous transformons vos idées en visuels puissants, alliant <strong
+                        class="text-white">photographie, <span class="span1">design graphique</span></strong> et
+                    émotion. Notre mission : donner vie à votre marque et captiver votre audience.
+                </p>
+                <div class="valeurs-section">
+                    <ul class="valeurs-list">
+                        <li>Créativité</li>
+                        <li>Professionnalisme</li>
+                        <li>Innovation</li>
+                        <li>Impact</li>
+                    </ul>
+                </div>
+                <div class="btn-container">
+                    <button class="btn-custom">Découvrir nos projets</button>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+<!--portfolio  -->
+
+
+
+
+
+ <!-- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.btn-container', {
+    distance: '40px',
+    duration: 800,
+    origin: 'bottom',
+    easing: 'ease-in-out',
+    scale: 0.9
+  });
+</script>
+
+<!--  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        ScrollReveal().reveal('.section', {
+            distance: '40px',
+            duration: 800,
+            origin: 'bottom',
+            easing: 'ease-in-out'
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

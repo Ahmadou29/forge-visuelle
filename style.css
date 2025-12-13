@@ -1,0 +1,135 @@
+*{
+    /* border: 2px solid red; */
+}
+
+.text-white{
+    color: #084347 !important;
+}
+
+.fs-1{
+    font-size: 2.9rem !important;
+    font-family: "Dancing Script", cursive;
+}
+.span1{
+    color: #e77706;
+}
+
+.navbar-brand{
+    font-family: "Dancing Script", cursive;
+}
+
+.nav-link{
+    color: #084347;
+}
+
+.nav-link:hover{
+    color: #e77706;
+    transition: 0.5s;
+}
+
+.home{
+    height: 90vh !important;
+}
+.vertical-container {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 40px;
+  font-weight: bold;
+  color: #e77607; /* Ta couleur */
+  line-height: 1.2;
+  height: 300px; /* adapte selon ton design */
+}
+
+.btn-custom {
+transition: transform 0.5s ease;
+}
+
+    /* Option si tu veux effet clic */
+.btn-custom.clicked {
+    transform: scale(0.95);
+}
+
+.btn-primary{
+    background-color: #e77607 !important;
+}
+
+.text-black{
+    color: #e77607 !important;
+}
+
+/* ===== SECTION ===== */
+.valeurs-section {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== LISTE ===== */
+.valeurs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* ===== ÉLÉMENTS ===== */
+.valeurs-list li {
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Couleurs alternées */
+.valeurs-list li:nth-child(odd) {
+  background-color: #e77607;
+}
+
+.valeurs-list li:nth-child(even) {
+  background-color: #0e464b;
+}
+
+/* Hover pour effet dynamique */
+.valeurs-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  cursor: default;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+.btn-custom {
+  background-color: #e77607;  
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Active / click effect */
+.btn-custom:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+
