@@ -30,7 +30,7 @@
                             <a class="nav-link" href="#propos">A propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Portfolio</a>
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Services<a>
@@ -69,7 +69,7 @@
 
         </section>
     </header>
-<!-- a propos -->
+    <!-- a propos -->
     <section id="propos" class="container py-4">
         <div class="text-center">
             <h1 class="text-black">A propos</h1>
@@ -103,34 +103,227 @@
         </div>
     </section>
 
+    <!--portfolio  -->
+    <section id="portfolio" class="container py-5">
 
-<!--portfolio  -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Portfolio</h2>
+            <p class="text-muted">Design & Photographie — ce que l'œil ressent avant les mots</p>
+        </div>
+
+        <!-- Filtres principaux -->
+        <div class="portfolio-filter text-center mb-3">
+            <button class="active" onclick="filterMain('all', event)">Tout</button>
+            <button onclick="filterMain('design', event)">Design</button>
+            <button onclick="filterMain('photo', event)">Photographie</button>
+        </div>
+
+        <!-- Sous-filtres Design -->
+        <div class="portfolio-filter text-center mb-4 d-none" id="designFilters">
+            <button onclick="filterSub('logo')">Logo</button>
+            <button onclick="filterSub('affiche')">Affiche</button>
+        </div>
+
+        <!-- Sous-filtres Photo -->
+        <div class="portfolio-filter text-center mb-4 d-none" id="photoFilters">
+            <button onclick="filterSub('bapteme')">Baptême</button>
+            <button onclick="filterSub('mariage')">Mariage</button>
+            <button onclick="filterSub('shooting')">Shooting</button>
+        </div>
+
+        <div class="row g-4" id="portfolioGrid">
+
+            <div class="col-md-4 portfolio-box design logo stagger design-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/accueil 2.png" alt="Logo">
+                    <div class="portfolio-overlay">Logo</div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-box design logo stagger design-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/accueil 2.png" alt="Logo">
+                    <div class="portfolio-overlay">Logo</div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-box design logo stagger design-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/accueil 2.png" alt="Logo">
+                    <div class="portfolio-overlay">Logo</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box design affiche stagger design-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/Affiche 4.png" alt="Affiche">
+                    <div class="portfolio-overlay">Affiche</div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-box design affiche stagger design-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/Affiche 4.png" alt="Affiche">
+                    <div class="portfolio-overlay">Affiche</div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-box design affiche stagger design-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/Affiche 4.png" alt="Affiche">
+                    <div class="portfolio-overlay">Affiche</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box photo bapteme stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/bapteme3.png" alt="Baptême">
+                    <div class="portfolio-overlay">Baptême</div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-box photo bapteme stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/bapteme2.png" alt="Baptême">
+                    <div class="portfolio-overlay">Baptême</div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-box photo bapteme stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/bapteme1.png" alt="Baptême">
+                    <div class="portfolio-overlay">Baptême</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box photo mariage stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/mariage.png" alt="Mariage" class="parallax">
+                    <div class="portfolio-overlay">Mariage</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box photo mariage stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/mariage.png" alt="Mariage" class="parallax">
+                    <div class="portfolio-overlay">Mariage</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box photo mariage stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/mariage2.png" alt="Mariage" class="parallax">
+                    <div class="portfolio-overlay">Mariage</div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 portfolio-box photo shooting stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/shooting1.png" alt="Shooting">
+                    <div class="portfolio-overlay">Shooting</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box photo shooting stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="images/shooting3.png" alt="Shooting">
+                    <div class="portfolio-overlay">Shooting</div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-box photo shooting stagger photo-anim">
+                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
+                    <img src="https://i.pinimg.com/736x/cf/f4/41/cff44182e43e59acd0220acd134d535a.jpg" alt="Shooting">
+                    <div class="portfolio-overlay">Shooting</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="modal fade" id="lightboxModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-body d-flex justify-content-center align-items-center p-0">
+                        <img id="lightboxImage" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
 
 
 
- <!-- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal().reveal('.btn-container', {
-    distance: '40px',
-    duration: 800,
-    origin: 'bottom',
-    easing: 'ease-in-out',
-    scale: 0.9
-  });
-</script>
 
-<!--  -->
+   
+   
+ <!-- Java Script-->
+<script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
+           ScrollReveal().reveal('.btn-container', {
+            distance: '40px',
+            duration: 800,
+            origin: 'bottom',
+            easing: 'ease-in-out',
+            scale: 0.9
+        });
+
+
         ScrollReveal().reveal('.section', {
             distance: '40px',
             duration: 800,
             origin: 'bottom',
             easing: 'ease-in-out'
+        });
+
+
+        // portfolio
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            document.getElementById('lightboxImage').src = img.src;
+            new bootstrap.Modal(document.getElementById('lightboxModal')).show();
+        }
+
+        function filterMain(category, event) {
+            const items = document.querySelectorAll('.portfolio-box');
+            document.getElementById('designFilters').classList.add('d-none');
+            document.getElementById('photoFilters').classList.add('d-none');
+
+            if (category === 'design') document.getElementById('designFilters').classList.remove('d-none');
+            if (category === 'photo') document.getElementById('photoFilters').classList.remove('d-none');
+
+            items.forEach(item => {
+                item.style.display = category === 'all' || item.classList.contains(category)
+                    ? 'block'
+                    : 'none';
+            });
+
+            document.querySelectorAll('.portfolio-filter button').forEach(b => b.classList.remove('active'));
+            if (event) event.target.classList.add('active');
+        }
+
+        function filterSub(sub) {
+            document.querySelectorAll('.portfolio-box').forEach(item => {
+                item.style.display = item.classList.contains(sub) ? 'block' : 'none';
+            });
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.stagger').forEach(el => observer.observe(el));
+
+        window.addEventListener('mousemove', e => {
+            document.querySelectorAll('.parallax').forEach(img => {
+                const x = (window.innerWidth / 2 - e.clientX) / 25;
+                const y = (window.innerHeight / 2 - e.clientY) / 25;
+                img.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+            });
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
