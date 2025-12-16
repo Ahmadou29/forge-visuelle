@@ -1,4 +1,3 @@
-
 .text-white {
   color: #084347 !important;
 }
@@ -25,7 +24,7 @@
   transition: 0.5s;
 }
 
- .self:hover{
+.self:hover {
   color: #e77706;
   transition: 0.5s;
 }
@@ -59,10 +58,9 @@
 
 .text-black {
   color: #e77607 !important;
-} */
+}
 
- 
-.valeurs-section {
+*/ .valeurs-section {
   background-color: #f4f4f4;
   padding: 50px 20px;
   display: flex;
@@ -122,7 +120,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-} 
+}
 
 .btn-custom:hover {
   transform: translateY(-3px);
@@ -191,7 +189,9 @@
 
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
-} */
+}
+
+*/
 
 /* Scroll & stagger animations */
 .stagger {
@@ -235,7 +235,9 @@
     opacity: 1;
     transform: scale(1);
   }
-} */
+}
+
+*/
 
 /* Lightbox animation */
 .modal.show img {
@@ -275,7 +277,7 @@
 .portfolio-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -296,7 +298,8 @@
   object-fit: contain;
 }
 
-.filter-btn.active, .self.active {
+.filter-btn.active,
+.self.active {
   background: #e77607;
   color: #fff !important;
 }
@@ -310,14 +313,48 @@
   border-radius: 14px;
   background: #fff;
 }
+
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
+
 .service-card img {
   margin-bottom: 15px;
 }
+
 .service-card.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* blog */
+#blog {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: #111;
+}
+
+.blog-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.blog-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+article {
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+}
+
+blockquote {
+  font-size: 1.1rem;
+  color: #444;
 }
