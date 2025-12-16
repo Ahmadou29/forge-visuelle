@@ -33,7 +33,7 @@
                             <a class="nav-link" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Services<a>
+                            <a class="nav-link" href="#services">Services<a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#">Blog</a>
@@ -108,36 +108,36 @@
 
     <section id="portfolio" class="container py-5">
 
-        <!-- TITRE -->
+        <!-- Titre -->
         <div class="text-center mb-5">
             <h2 class="fw-bold text-black">Portfolio</h2>
             <p class="text-muted">Ce que l’image murmure au cœur.</p>
         </div>
 
-        <!-- FILTRES PRINCIPAUX -->
+        <!-- Filtres Principeaux -->
         <div class="portfolio-filter text-center mb-3">
             <button class="filter-btn active" data-filter="all">Tout</button>
             <button class="filter-btn" data-filter="design">Design</button>
             <button class="filter-btn" data-filter="photo">Photographie</button>
         </div>
 
-        <!-- SOUS-FILTRES DESIGN -->
+        <!-- Sous-Filtre Design -->
         <div class="portfolio-filter text-center mb-4 d-none" id="designFilters">
             <button class="self " data-subfilter="logo">Logo</button>
             <button class="self" data-subfilter="affiche">Affiche</button>
         </div>
 
-        <!-- SOUS-FILTRES PHOTO -->
+        <!-- Sous-Filtres Photo -->
         <div class="portfolio-filter text-center mb-4 d-none" id="photoFilters">
             <button class="self active" data-subfilter="bapteme">Baptême</button>
             <button class="self" data-subfilter="mariage">Mariage</button>
             <button class="self" data-subfilter="shooting">Shooting</button>
         </div>
 
-        <!-- GRID DES PROJETS -->
+        <!--------------------- Grid des Projet --------------------->
         <div class="row g-4" id="portfolioGrid">
 
-            <!-- DESIGN -->
+            <!---------------------------- design ---------------------------->
             <div class="col-md-4 portfolio-box design logo">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
                     <img src="images/accueil 2.png" alt="Logo" class="img-fluid">
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <!-- PHOTO -->
+            <!------------------------------- Photo ------------------------------->
             <div class="col-md-4 portfolio-box photo mariage">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
                     <img src="images/mariage.png" alt="Mariage" class="img-fluid">
@@ -174,18 +174,18 @@
         </div>
     </section>
 
-    <!-- LIGHTBOX MODAL -->
+    <!-- Lightbox Modal -->
     <div class="modal fade" id="lightboxModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-dark rounded-4">
 
-                <!-- BOUTON FERMER -->
+                <!-- Boutton Fermer -->
                 <div class="modal-header border-0">
                     <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
 
-                <!-- IMAGE -->
+                <!-- Images -->
                 <div class="modal-body d-flex justify-content-center align-items-center">
                     <img id="lightboxImage" class="img-fluid rounded-3" alt="Image agrandie">
                 </div>
@@ -194,7 +194,48 @@
         </div>
     </div>
 
+    <!-- portfolio -->
 
+
+    <!-- services -->
+    <section id="services" class="container py-5">
+        <!-- TITRE -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-black">Nos Services</h2>
+            <p class="text-muted">Ce que nous faisons pour sublimer votre image.</p>
+        </div>
+
+       
+        <div class="row g-4">
+
+            <!-- services 1 -->
+            <div class="col-md-6 service-card fade-in" data-delay="0">
+                <div class="card text-center shadow-sm border-0 h-100 p-4">
+                    <div class="mb-3">
+                        <img src="images/photographie.png" alt="Photographie" class="img-fluid" style="height:60px;">
+                    </div>
+                    <h5 class="fw-bold text-black">Photographie</h5>
+                    <p class="text-muted">Immortaliser vos moments précieux avec créativité et précision.</p>
+                </div>
+            </div>
+
+            <!-- services 2 -->
+            <div class="col-md-6 service-card fade-in" data-delay="200">
+                <div class="card text-center shadow-sm border-0 h-100 p-4">
+                    <div class="mb-3">
+                        <img src="images/design.png" alt="Design Graphique" class="img-fluid" style="height:60px;">
+                    </div>
+                    <h5 class="fw-bold text-white">Design Graphique</h5>
+                    <p class="text-muted">Création d’identités visuelles uniques et mémorables pour votre marque.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- JS ANIMATION AU SCROLL -->
 
     <!------------------------------------------------------------------------------------------------------------------------------------>
     <!--------------------------------------------------------- Java Script --------------------------------------------------------------->
@@ -221,65 +262,78 @@
         });
 
 
- 
-// FILTRES PRINCIPAUX
-const filterBtns = document.querySelectorAll(".filter-btn");
-const portfolioItems = document.querySelectorAll(".portfolio-box");
 
-filterBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+        // FILTRES PRINCIPAUX
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-box");
 
-    const filter = btn.dataset.filter;
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
 
-    portfolioItems.forEach(item => {
-      if(filter === "all" || item.classList.contains(filter)){
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    });
+                const filter = btn.dataset.filter;
 
-    // afficher les sous-filtres
-    document.getElementById("designFilters").classList.toggle("d-none", filter !== "design");
-    document.getElementById("photoFilters").classList.toggle("d-none", filter !== "photo");
-  });
-});
+                portfolioItems.forEach(item => {
+                    if (filter === "all" || item.classList.contains(filter)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
 
-// SOUS-FILTRES
-const subBtns = document.querySelectorAll(".self");
-subBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const parent = btn.closest(".portfolio-filter");
-    parent.querySelectorAll(".self").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+                // afficher les sous-filtres
+                document.getElementById("designFilters").classList.toggle("d-none", filter !== "design");
+                document.getElementById("photoFilters").classList.toggle("d-none", filter !== "photo");
+            });
+        });
 
-    const subfilter = btn.dataset.subfilter;
+        // SOUS-FILTRES
+        const subBtns = document.querySelectorAll(".self");
+        subBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const parent = btn.closest(".portfolio-filter");
+                parent.querySelectorAll(".self").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
 
-    portfolioItems.forEach(item => {
-      if(item.classList.contains(subfilter)){
-        item.style.display = "block";
-      } else if(parent.id === "designFilters" && item.classList.contains("design")){
-        item.style.display = "none";
-      } else if(parent.id === "photoFilters" && item.classList.contains("photo")){
-        item.style.display = "none";
-      }
-    });
-  });
-});
+                const subfilter = btn.dataset.subfilter;
 
-// LIGHTBOX
-function openLightbox(element){
-  const img = element.querySelector("img");
-  document.getElementById("lightboxImage").src = img.src;
+                portfolioItems.forEach(item => {
+                    if (item.classList.contains(subfilter)) {
+                        item.style.display = "block";
+                    } else if (parent.id === "designFilters" && item.classList.contains("design")) {
+                        item.style.display = "none";
+                    } else if (parent.id === "photoFilters" && item.classList.contains("photo")) {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
 
-  const modal = new bootstrap.Modal(document.getElementById("lightboxModal"));
-  modal.show();
-}
+        // LIGHTBOX
+        function openLightbox(element) {
+            const img = element.querySelector("img");
+            document.getElementById("lightboxImage").src = img.src;
+
+            const modal = new bootstrap.Modal(document.getElementById("lightboxModal"));
+            modal.show();
+        }
 
 
-       
+        const cards = document.querySelectorAll('.service-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('show');
+                    }, delay);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        cards.forEach(card => observer.observe(card));
 
 
 
