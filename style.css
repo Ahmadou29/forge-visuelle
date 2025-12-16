@@ -1,63 +1,67 @@
-*{
-    /* border: 2px solid red; */
+
+.text-white {
+  color: #084347 !important;
 }
 
-.text-white{
-    color: #084347 !important;
+.fs-1 {
+  font-size: 2.9rem !important;
+  font-family: "Dancing Script", cursive;
 }
 
-.fs-1{
-    font-size: 2.9rem !important;
-    font-family: "Dancing Script", cursive;
-}
-.span1{
-    color: #e77706;
+.span1 {
+  color: #e77706;
 }
 
-.navbar-brand{
-    font-family: "Dancing Script", cursive;
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
 }
 
-.nav-link{
-    color: #084347;
+.nav-link {
+  color: #084347;
 }
 
-.nav-link:hover{
-    color: #e77706;
-    transition: 0.5s;
+.nav-link:hover {
+  color: #e77706;
+  transition: 0.5s;
 }
 
-.home{
-    height: 90vh !important;
+ .self:hover{
+  color: #e77706;
+  transition: 0.5s;
 }
+
+.home {
+  height: 90vh !important;
+}
+
 .vertical-container {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 40px;
   font-weight: bold;
-  color: #e77607; /* Ta couleur */
+  color: #e77607;
   line-height: 1.2;
-  height: 300px; /* adapte selon ton design */
+  height: 300px;
 }
 
 .btn-custom {
-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
-    /* Option si tu veux effet clic */
+
 .btn-custom.clicked {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-.btn-primary{
-    background-color: #e77607 !important;
+.btn-primary {
+  background-color: #e77607 !important;
 }
 
-.text-black{
-    color: #e77607 !important;
-}
+.text-black {
+  color: #e77607 !important;
+} */
 
-/* ===== SECTION ===== */
+ 
 .valeurs-section {
   background-color: #f4f4f4;
   padding: 50px 20px;
@@ -65,7 +69,7 @@ transition: transform 0.5s ease;
   justify-content: center;
 }
 
-/* ===== LISTE ===== */
+
 .valeurs-list {
   list-style: none;
   padding: 0;
@@ -77,7 +81,7 @@ transition: transform 0.5s ease;
   width: 100%;
 }
 
-/* ===== ÉLÉMENTS ===== */
+
 .valeurs-list li {
   padding: 15px 20px;
   border-radius: 8px;
@@ -88,7 +92,6 @@ transition: transform 0.5s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Couleurs alternées */
 .valeurs-list li:nth-child(odd) {
   background-color: #e77607;
 }
@@ -97,20 +100,21 @@ transition: transform 0.5s ease;
   background-color: #0e464b;
 }
 
-/* Hover pour effet dynamique */
+
 .valeurs-list li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   cursor: default;
 }
 
 .btn-container {
   display: flex;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
 }
+
 .btn-custom {
-  background-color: #e77607;  
+  background-color: #e77607;
   color: #fff;
   padding: 12px 30px;
   font-size: 1rem;
@@ -118,119 +122,181 @@ transition: transform 0.5s ease;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+} 
 
-/* Hover effect */
 .btn-custom:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Active / click effect */
+
 .btn-custom:active {
   transform: scale(0.95);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-  #portfolio {
-      background-color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-    }
+#portfolio {
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .portfolio-filter button {
-      border: none;
-      background: none;
-      font-weight: 500;
-      margin: 0 10px;
-      color: #0e464b;
-    }
+.portfolio-filter button {
+  border: none;
+  background: none;
+  font-weight: 500;
+  margin: 0 10px;
+  color: #0e464b;
+}
 
-    .portfolio-filter button.active {
-      color: #e77607;
-      border-bottom: 2px solid #e77607;
-    }
+.portfolio-filter button.active {
+  color: #e77607;
+  border-bottom: 2px solid #e77607;
+}
 
-    .portfolio-item {
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
+.portfolio-item {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
 
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-    }
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
 
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
-    .portfolio-item:hover img {
-      transform: scale(1.05);
-    }
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
 
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(14,70,75,0.75);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      text-align: center;
-    }
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 70, 75, 0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
 
-    .portfolio-item:hover .portfolio-overlay {
-      opacity: 1;
-    }
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+} */
 
-    /* Scroll & stagger animations */
-    .stagger {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
+/* Scroll & stagger animations */
+.stagger {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
-    .stagger.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.stagger.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .design-anim.show {
-      animation: designFloat 0.9s ease forwards;
-    }
+.design-anim.show {
+  animation: designFloat 0.9s ease forwards;
+}
 
-    .photo-anim.show {
-      animation: photoFade 1s ease forwards;
-    }
+.photo-anim.show {
+  animation: photoFade 1s ease forwards;
+}
 
-    @keyframes designFloat {
-      from { opacity: 0; transform: translateY(30px) rotate(-1deg); }
-      to { opacity: 1; transform: translateY(0) rotate(0); }
-    }
+@keyframes designFloat {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotate(-1deg);
+  }
 
-    @keyframes photoFade {
-      from { opacity: 0; transform: scale(0.96); }
-      to { opacity: 1; transform: scale(1); }
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
 
-    /* Lightbox animation */
-    .modal.show img {
-      animation: zoomInLightbox 0.6s ease;
-    }
+@keyframes photoFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
 
-    @keyframes zoomInLightbox {
-      from { transform: scale(0.85); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
 
-    /* Parallax mariage */
-    .parallax {
-      transition: transform 0.2s ease-out;
-    }
+/* Lightbox animation */
+.modal.show img {
+  animation: zoomInLightbox 0.6s ease;
+}
+
+@keyframes zoomInLightbox {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+/* PORTFOLIO */
+.portfolio-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.portfolio-item img {
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Lightbox image max size */
+#lightboxImage {
+  max-height: 75vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.filter-btn.active, .self.active {
+  background: #e77607;
+  color: #fff !important;
+}

@@ -84,7 +84,7 @@
                     Chez <strong class="text-white">Forge <span class="span1">Visuelle</span></strong>, chaque image
                     raconte une histoire. Nous transformons vos idées en visuels puissants, alliant <strong
                         class="text-white">photographie, <span class="span1">design graphique</span></strong> et
-                    émotion. Notre mission : donner vie à votre marque et captiver votre audience.
+                    émotion. <br> <strong>Notre mission:</strong> donner vie à votre marque et captiver votre audience.
                 </p>
                 <div class="valeurs-section">
                     <ul class="valeurs-list">
@@ -94,8 +94,8 @@
                         <li>Impact</li>
                     </ul>
                 </div>
-                <div class="btn-container">
-                    <button class="btn-custom">Découvrir nos projets</button>
+                <div class="btn-container py-3">
+                    <button class="btn-custom" id="btnPortfolio"> Découvrir nos projets</button>
                 </div>
 
 
@@ -103,165 +103,108 @@
         </div>
     </section>
 
-    <!--portfolio  -->
+
+    <!--------------------------------------- portfolio ------------------------------>
+
     <section id="portfolio" class="container py-5">
 
+        <!-- TITRE -->
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Portfolio</h2>
-            <p class="text-muted">Design & Photographie — ce que l'œil ressent avant les mots</p>
+            <h2 class="fw-bold text-black">Portfolio</h2>
+            <p class="text-muted">Ce que l’image murmure au cœur.</p>
         </div>
 
-        <!-- Filtres principaux -->
+        <!-- FILTRES PRINCIPAUX -->
         <div class="portfolio-filter text-center mb-3">
-            <button class="active" onclick="filterMain('all', event)">Tout</button>
-            <button onclick="filterMain('design', event)">Design</button>
-            <button onclick="filterMain('photo', event)">Photographie</button>
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="photo">Photographie</button>
         </div>
 
-        <!-- Sous-filtres Design -->
+        <!-- SOUS-FILTRES DESIGN -->
         <div class="portfolio-filter text-center mb-4 d-none" id="designFilters">
-            <button onclick="filterSub('logo')">Logo</button>
-            <button onclick="filterSub('affiche')">Affiche</button>
+            <button class="self " data-subfilter="logo">Logo</button>
+            <button class="self" data-subfilter="affiche">Affiche</button>
         </div>
 
-        <!-- Sous-filtres Photo -->
+        <!-- SOUS-FILTRES PHOTO -->
         <div class="portfolio-filter text-center mb-4 d-none" id="photoFilters">
-            <button onclick="filterSub('bapteme')">Baptême</button>
-            <button onclick="filterSub('mariage')">Mariage</button>
-            <button onclick="filterSub('shooting')">Shooting</button>
+            <button class="self active" data-subfilter="bapteme">Baptême</button>
+            <button class="self" data-subfilter="mariage">Mariage</button>
+            <button class="self" data-subfilter="shooting">Shooting</button>
         </div>
 
+        <!-- GRID DES PROJETS -->
         <div class="row g-4" id="portfolioGrid">
 
-            <div class="col-md-4 portfolio-box design logo stagger design-anim">
+            <!-- DESIGN -->
+            <div class="col-md-4 portfolio-box design logo">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/accueil 2.png" alt="Logo">
+                    <img src="images/accueil 2.png" alt="Logo" class="img-fluid">
                     <div class="portfolio-overlay">Logo</div>
                 </div>
             </div>
-            <div class="col-md-4 portfolio-box design logo stagger design-anim">
+            <div class="col-md-4 portfolio-box design affiche">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/accueil 2.png" alt="Logo">
-                    <div class="portfolio-overlay">Logo</div>
-                </div>
-            </div>
-            <div class="col-md-4 portfolio-box design logo stagger design-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/accueil 2.png" alt="Logo">
-                    <div class="portfolio-overlay">Logo</div>
-                </div>
-            </div>
-
-            <div class="col-md-4 portfolio-box design affiche stagger design-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/Affiche 4.png" alt="Affiche">
-                    <div class="portfolio-overlay">Affiche</div>
-                </div>
-            </div>
-            <div class="col-md-4 portfolio-box design affiche stagger design-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/Affiche 4.png" alt="Affiche">
-                    <div class="portfolio-overlay">Affiche</div>
-                </div>
-            </div>
-            <div class="col-md-4 portfolio-box design affiche stagger design-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/Affiche 4.png" alt="Affiche">
+                    <img src="images/Affiche 4.png" alt="Affiche" class="img-fluid">
                     <div class="portfolio-overlay">Affiche</div>
                 </div>
             </div>
 
-            <div class="col-md-4 portfolio-box photo bapteme stagger photo-anim">
+            <!-- PHOTO -->
+            <div class="col-md-4 portfolio-box photo mariage">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/bapteme3.png" alt="Baptême">
-                    <div class="portfolio-overlay">Baptême</div>
-                </div>
-            </div>
-            <div class="col-md-4 portfolio-box photo bapteme stagger photo-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/bapteme2.png" alt="Baptême">
-                    <div class="portfolio-overlay">Baptême</div>
-                </div>
-            </div>
-            <div class="col-md-4 portfolio-box photo bapteme stagger photo-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/bapteme1.png" alt="Baptême">
-                    <div class="portfolio-overlay">Baptême</div>
-                </div>
-            </div>
-
-            <div class="col-md-4 portfolio-box photo mariage stagger photo-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/mariage.png" alt="Mariage" class="parallax">
+                    <img src="images/mariage.png" alt="Mariage" class="img-fluid">
                     <div class="portfolio-overlay">Mariage</div>
                 </div>
             </div>
-
-            <div class="col-md-4 portfolio-box photo mariage stagger photo-anim">
+            <div class="col-md-4 portfolio-box photo bapteme">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/mariage.png" alt="Mariage" class="parallax">
-                    <div class="portfolio-overlay">Mariage</div>
+                    <img src="images/bapteme1.png" alt="Baptême" class="img-fluid">
+                    <div class="portfolio-overlay">Baptême</div>
                 </div>
             </div>
-
-            <div class="col-md-4 portfolio-box photo mariage stagger photo-anim">
+            <div class="col-md-4 portfolio-box photo shooting">
                 <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/mariage2.png" alt="Mariage" class="parallax">
-                    <div class="portfolio-overlay">Mariage</div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4 portfolio-box photo shooting stagger photo-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/shooting1.png" alt="Shooting">
-                    <div class="portfolio-overlay">Shooting</div>
-                </div>
-            </div>
-
-            <div class="col-md-4 portfolio-box photo shooting stagger photo-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="images/shooting3.png" alt="Shooting">
-                    <div class="portfolio-overlay">Shooting</div>
-                </div>
-            </div>
-
-            <div class="col-md-4 portfolio-box photo shooting stagger photo-anim">
-                <div class="position-relative portfolio-item" onclick="openLightbox(this)">
-                    <img src="https://i.pinimg.com/736x/cf/f4/41/cff44182e43e59acd0220acd134d535a.jpg" alt="Shooting">
+                    <img src="images/shooting1.png" alt="Shooting" class="img-fluid">
                     <div class="portfolio-overlay">Shooting</div>
                 </div>
             </div>
 
         </div>
-
-        <!-- Lightbox Modal -->
-        <div class="modal fade" id="lightboxModal" tabindex="-1">
-            <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-                <div class="modal-content bg-dark">
-                    <div class="modal-body d-flex justify-content-center align-items-center p-0">
-                        <img id="lightboxImage" class="img-fluid" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark rounded-4">
+
+                <!-- BOUTON FERMER -->
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <img id="lightboxImage" class="img-fluid rounded-3" alt="Image agrandie">
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
-
-
-   
-   
- <!-- Java Script-->
-<script src="https://unpkg.com/scrollreveal"></script>
+    <!------------------------------------------------------------------------------------------------------------------------------------>
+    <!--------------------------------------------------------- Java Script --------------------------------------------------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
-           ScrollReveal().reveal('.btn-container', {
+        ScrollReveal().reveal('.btn-container', {
             distance: '40px',
             duration: 800,
             origin: 'bottom',
@@ -278,53 +221,71 @@
         });
 
 
-        // portfolio
+ 
+// FILTRES PRINCIPAUX
+const filterBtns = document.querySelectorAll(".filter-btn");
+const portfolioItems = document.querySelectorAll(".portfolio-box");
 
-        function openLightbox(element) {
-            const img = element.querySelector('img');
-            document.getElementById('lightboxImage').src = img.src;
-            new bootstrap.Modal(document.getElementById('lightboxModal')).show();
-        }
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-        function filterMain(category, event) {
-            const items = document.querySelectorAll('.portfolio-box');
-            document.getElementById('designFilters').classList.add('d-none');
-            document.getElementById('photoFilters').classList.add('d-none');
+    const filter = btn.dataset.filter;
 
-            if (category === 'design') document.getElementById('designFilters').classList.remove('d-none');
-            if (category === 'photo') document.getElementById('photoFilters').classList.remove('d-none');
+    portfolioItems.forEach(item => {
+      if(filter === "all" || item.classList.contains(filter)){
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
 
-            items.forEach(item => {
-                item.style.display = category === 'all' || item.classList.contains(category)
-                    ? 'block'
-                    : 'none';
-            });
+    // afficher les sous-filtres
+    document.getElementById("designFilters").classList.toggle("d-none", filter !== "design");
+    document.getElementById("photoFilters").classList.toggle("d-none", filter !== "photo");
+  });
+});
 
-            document.querySelectorAll('.portfolio-filter button').forEach(b => b.classList.remove('active'));
-            if (event) event.target.classList.add('active');
-        }
+// SOUS-FILTRES
+const subBtns = document.querySelectorAll(".self");
+subBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const parent = btn.closest(".portfolio-filter");
+    parent.querySelectorAll(".self").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-        function filterSub(sub) {
-            document.querySelectorAll('.portfolio-box').forEach(item => {
-                item.style.display = item.classList.contains(sub) ? 'block' : 'none';
-            });
-        }
+    const subfilter = btn.dataset.subfilter;
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('show');
-            });
-        }, { threshold: 0.2 });
+    portfolioItems.forEach(item => {
+      if(item.classList.contains(subfilter)){
+        item.style.display = "block";
+      } else if(parent.id === "designFilters" && item.classList.contains("design")){
+        item.style.display = "none";
+      } else if(parent.id === "photoFilters" && item.classList.contains("photo")){
+        item.style.display = "none";
+      }
+    });
+  });
+});
 
-        document.querySelectorAll('.stagger').forEach(el => observer.observe(el));
+// LIGHTBOX
+function openLightbox(element){
+  const img = element.querySelector("img");
+  document.getElementById("lightboxImage").src = img.src;
 
-        window.addEventListener('mousemove', e => {
-            document.querySelectorAll('.parallax').forEach(img => {
-                const x = (window.innerWidth / 2 - e.clientX) / 25;
-                const y = (window.innerHeight / 2 - e.clientY) / 25;
-                img.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
-            });
-        });
+  const modal = new bootstrap.Modal(document.getElementById("lightboxModal"));
+  modal.show();
+}
+
+
+       
+
+
+
+
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
