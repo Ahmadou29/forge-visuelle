@@ -295,7 +295,6 @@
                 </article>
             </div>
 
-
             <!-- ARTICLE 5  -->
             <div class="col-md-4 blog-item">
                 <article class="p-4 border rounde-4 h-100">
@@ -322,9 +321,79 @@
 
         </div>
     </section>
+<!-- Fin blog -->
+
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-black">Contact</h2>
+      <p class="text-muted">Une idée, un projet, une intuition ? Parlons-en.</p>
+      <!-- <p class="text-muted">Entrons en conversation.</p> -->
+    </div>
+
+    <div class="row g-4">
+      <!-- Infos -->
+      <div class="col-lg-5">
+        <div class="contact-card p-4 h-100">
+          <h5 class="mb-3 text-white fw-bolder">Me joindre</h5>
+          <p class="small text-muted">Tu as une idée floue ? Un projet précis ? Ou juste une intuition qui te travaille ?</p> 
+          <p>Écris. Je lis. On voit où ça nous mène.</p>
+
+          <ul class="list-unstyled mt-4">
+            <li class="mb-3">
+              <i class="bi bi-envelope"></i>
+              <span>forgevisuelle3@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-whatsapp"></i>
+              <span>+221 768250580</span>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt"></i>
+              <span>Sénégal</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="col-lg-7">
+        <form class="contact-form p-4" id="contactForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Votre nom" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Votre email" required>
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" placeholder="Sujet">
+            </div>
+            <div class="col-12">
+              <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark w-100">Envoyer le message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-    <!-- JS ANIMATION AU SCROLL -->
+
+
+
+
+<!-- ================= WhatsApp Floating Button ================= -->
+<a href="https://wa.me/221768250580" target="_blank" class="whatsapp-float">
+  <i class="bi bi-whatsapp text-white"></i>
+</a>
+
+
 
     <!------------------------------------------------------------------------------------------------------------------------------------>
     <!--------------------------------------------------------- Java Script --------------------------------------------------------------->
@@ -332,6 +401,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
         ScrollReveal().reveal('.btn-container', {
@@ -441,7 +511,31 @@
             });
         });
 
+ (function(){
+    emailjs.init('XpD9T6NV8H_w0V3vz'); // 🔑 remplace par ta clé EmailJS
+  })();
 
+
+
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const btn = form.querySelector('button');
+    btn.innerText = 'Envoi en cours…';
+    btn.disabled = true;
+
+    emailjs.sendForm('service_4xpn7l4', 'template_rwk9dpw', this)
+      .then(() => {
+        btn.innerText = 'Message envoyé ✨';
+        form.reset();
+      })
+      .catch(() => {
+        btn.innerText = 'Erreur 😕 Réessayer';
+        btn.disabled = false;
+      });
+  });
 
 
     </script>
