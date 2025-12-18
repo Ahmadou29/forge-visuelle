@@ -7,6 +7,7 @@
     <title>Forge Visuelle</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
@@ -15,42 +16,43 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-white fixed-top text-center">
             <div class="container">
-                <a class="navbar-brand fw-bold text-white hide" href="#">Forge <span class="span1"> Visuelle</span></a>
+                <a class="navbar-brand fw-bold text-white hide text-black" href="#propos">Forge Visuelle</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-6">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-6 ">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#home">Home</a>
+                            <a class="nav-link fw-bold blanch" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#propos">A propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services<a>
+                            <a class="nav-link blanc" href="#propos">A propos</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#blog">Blog</a>
+                            <a class="nav-link blanc" href="#vision">Notre Vision</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link blanc" href="#services">Services<a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link blanc" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#contacts">Contact</a>
+                            <a class="nav-link blanc" href="#blog">Blog</a>
                         </li>
+
                     </ul>
-                    <button class="btn btn-primary btn-lg btn-custom shadow-lg border-0" id="myButton">
-                        Cliquer ici
-                    </button>
+                    <a class="btn btn-primary btn- shadow-lg border-0" href="#contact">
+                        Contact
+                    </a>
                 </div>
             </div>
         </nav>
 
         <!-- section main -->
-        <section id="#home" class="main section">
+        <section id="home" class="main section">
             <div class="container ">
                 <div class="row py-5">
                     <div class="col-md-6 py-5 my-4 section">
@@ -58,10 +60,9 @@
                                 class="text-white fs-1">Forge
                                 <span class="span1"> Visuelle</span></span> — où chaque image raconte, et chaque design
                             renforce la valeur de votre marque.</h1>
-                        <button class="btn btn-primary shadow bg-body-tertiary btn-lg btn-custom border-0 mt-4"
-                            id="myButton">
-                            Cliquer ici
-                        </button>
+                        <a class="btn btn-primary btn- shadow-lg border-0" href="#contact">
+                            Contact
+                        </a>
 
                     </div>
                     <div class="col-md-6">
@@ -78,17 +79,25 @@
             <h1 class="text-black">A propos</h1>
         </div>
         <div class="row">
-            <div class="col-md-6 py-5">
+            <div class="col-md-6">
                 <img src="images/ACCUEIL.png" alt="" class="img-fluid">
             </div>
             <div class="col-md-6 py-5 ">
-                <h2 class="text-white text-center fw-bolder">Notre vision de l’image</h2>
-                <p>
-                    Chez <strong class="text-white">Forge <span class="span1">Visuelle</span></strong>, chaque image
-                    raconte une histoire. Nous transformons vos idées en visuels puissants, alliant <strong
-                        class="text-white">photographie, <span class="span1">design graphique</span></strong> et
-                    émotion. <br> <strong>Notre mission:</strong> donner vie à votre marque et captiver votre audience.
-                </p>
+                <h2 class="text-white text-center fw-bolder">Qui sommes-nous ?</h2>
+                <p> <strong>Forge Visuelle</strong> est un studio créatif dédié à la <strong>photographie, au design
+                        graphique.</strong>
+
+                    Nous concevons des images qui portent du sens, des formes qui racontent, et des identités visuelles
+                    qui traversent le temps.
+
+                    Née d’une volonté de créer avec intention, Forge Visuelle puise dans l’héritage culturel et
+                    l’exigence du détail pour façonner des univers visuels authentiques. Chaque projet est abordé comme
+                    une œuvre à part entière, pensée pour durer, toucher et transmettre.
+
+                    Nous accompagnons marques, institutions et porteurs de projets dans la construction d’une image
+                    juste, cohérente et forte.
+                    De l’idée à la matière, de la vision à l’image, nous forgeons des créations alignées avec leur
+                    époque et leurs valeurs.</p>
                 <div class="valeurs-section">
                     <ul class="valeurs-list">
                         <li>Créativité</li>
@@ -97,8 +106,8 @@
                         <li>Impact</li>
                     </ul>
                 </div>
-                <div class="btn-container py-3">
-                    <button class="btn-custom" id="btnPortfolio"> Découvrir nos projets</button>
+                <div class="btn-container py-4">
+                    <a class="btn-custom" href="#portfolio"> Découvrir nos projets</a>
                 </div>
 
 
@@ -106,9 +115,80 @@
         </div>
     </section>
 
+    <!-- Notre Vision -->
+    <section id="vision" class="vision-section">
+        <div class="vision-container">
 
+            <!-- Texte -->
+            <div class="vision-text">
+                <span class="vision-label">Notre vision</span>
+                <h2>
+                    Créer avec sens.<br>
+                    Forger des images qui traversent le temps.
+                </h2>
+
+                <p>
+                    Chez <strong>Forge Visuelle</strong>, nous croyons que l’image
+                    est un langage puissant. Elle ne se limite pas à l’esthétique :
+                    elle raconte, transmet et ancre une vision.
+                </p>
+
+                <p>
+                    Notre approche s’appuie sur l’héritage culturel, la rigueur du
+                    travail artisanal et une lecture contemporaine du monde.
+                    Chaque création est pensée pour être juste, durable
+                    et profondément alignée avec les valeurs de ceux que nous accompagnons.
+                </p>
+
+                <p class="vision-quote">
+                    « L’intention traverse le temps. »
+                </p>
+            </div>
+
+            <!-- Visuel -->
+            <div class="vision-visual">
+                <div class="vision-shape"></div>
+                <span>VISION</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- services -->
+    <section id="services" class="container py-5">
+        <!-- TITRE -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-black">Nos Services</h2>
+            <p class="text-muted">Ce que nous faisons pour sublimer votre image.</p>
+        </div>
+        <div class="row g-4">
+
+            <!-- services 1 -->
+            <div class="col-md-6 service-card fade-in" data-delay="0">
+                <div class="card text-center shadow-sm border-0 h-100 p-4">
+                    <div class="mb-3">
+                        <img src="images/photographie.png" alt="Photographie" class="img-fluid" style="height:60px;">
+                    </div>
+                    <h5 class="fw-bold text-black">Photographie</h5>
+                    <p class="text-muted">Immortaliser vos moments précieux avec créativité et précision.</p>
+                </div>
+            </div>
+
+            <!-- services 2 -->
+            <div class="col-md-6 service-card fade-in" data-delay="200">
+                <div class="card text-center shadow-sm border-0 h-100 p-4">
+                    <div class="mb-3">
+                        <img src="images/design.png" alt="Design Graphique" class="img-fluid" style="height:60px;">
+                    </div>
+                    <h5 class="fw-bold text-white">Design Graphique</h5>
+                    <p class="text-muted">Création d’identités visuelles uniques et mémorables pour votre marque.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- services -->
     <!--------------------------------------- portfolio ------------------------------>
-
     <section id="portfolio" class="container py-5">
 
         <!-- Titre -->
@@ -120,8 +200,8 @@
         <!-- Filtres Principeaux -->
         <div class="portfolio-filter text-center mb-3">
             <button class="filter-btn active" data-filter="all">Tout</button>
-            <button class="filter-btn" data-filter="design">Design</button>
-            <button class="filter-btn" data-filter="photo">Photographie</button>
+            <button id="design" class="filter-btn" data-filter="design">Design graphique</button>
+            <button id="photographie" class="filter-btn" data-filter="photo">Photographie</button>
         </div>
 
         <!-- Sous-Filtre Design -->
@@ -197,43 +277,7 @@
         </div>
     </div>
 
-    <!-- portfolio -->
-
-
-    <!-- services -->
-    <section id="services" class="container py-5">
-        <!-- TITRE -->
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-black">Nos Services</h2>
-            <p class="text-muted">Ce que nous faisons pour sublimer votre image.</p>
-        </div>
-        <div class="row g-4">
-
-            <!-- services 1 -->
-            <div class="col-md-6 service-card fade-in" data-delay="0">
-                <div class="card text-center shadow-sm border-0 h-100 p-4">
-                    <div class="mb-3">
-                        <img src="images/photographie.png" alt="Photographie" class="img-fluid" style="height:60px;">
-                    </div>
-                    <h5 class="fw-bold text-black">Photographie</h5>
-                    <p class="text-muted">Immortaliser vos moments précieux avec créativité et précision.</p>
-                </div>
-            </div>
-
-            <!-- services 2 -->
-            <div class="col-md-6 service-card fade-in" data-delay="200">
-                <div class="card text-center shadow-sm border-0 h-100 p-4">
-                    <div class="mb-3">
-                        <img src="images/design.png" alt="Design Graphique" class="img-fluid" style="height:60px;">
-                    </div>
-                    <h5 class="fw-bold text-white">Design Graphique</h5>
-                    <p class="text-muted">Création d’identités visuelles uniques et mémorables pour votre marque.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- services -->
+    <!-- fin portfolio -->
 
     <!-- blog -->
     <section id="blog" class="container py-5">
@@ -321,77 +365,166 @@
 
         </div>
     </section>
-<!-- Fin blog -->
+    <!-- Fin blog -->
 
-<!-- ================= CONTACT SECTION ================= -->
-<section id="contact" class="contact-section py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-black">Contact</h2>
-      <p class="text-muted">Une idée, un projet, une intuition ? Parlons-en.</p>
-      <!-- <p class="text-muted">Entrons en conversation.</p> -->
-    </div>
 
-    <div class="row g-4">
-      <!-- Infos -->
-      <div class="col-lg-5">
-        <div class="contact-card p-4 h-100">
-          <h5 class="mb-3 text-white fw-bolder">Me joindre</h5>
-          <p class="small text-muted">Tu as une idée floue ? Un projet précis ? Ou juste une intuition qui te travaille ?</p> 
-          <p>Écris. Je lis. On voit où ça nous mène.</p>
+    <!-- Contact section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-black">Contact</h2>
+                <p class="text-muted">Une idée, un projet, une intuition ? Parlons-en.</p>
+                <!-- <p class="text-muted">Entrons en conversation.</p> -->
+            </div>
 
-          <ul class="list-unstyled mt-4">
-            <li class="mb-3">
-              <i class="bi bi-envelope"></i>
-              <span>forgevisuelle3@gmail.com</span>
-            </li>
-            <li class="mb-3">
-              <i class="bi bi-whatsapp"></i>
-              <span>+221 768250580</span>
-            </li>
-            <li>
-              <i class="bi bi-geo-alt"></i>
-              <span>Sénégal</span>
-            </li>
-          </ul>
+            <div class="row g-4">
+                <!-- Infos -->
+                <div class="col-lg-5">
+                    <div class="contact-card p-4 h-100">
+                        <h5 class="mb-3 text-white fw-bolder">Me joindre</h5>
+                        <p class="small text-muted">Tu as une idée floue ? Un projet précis ? Ou juste une intuition qui
+                            te travaille ?</p>
+                        <p>Écris. Je lis. On voit où ça nous mène.</p>
+
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3">
+                                <i class="bi bi-envelope"></i>
+                                <span>forgevisuelle3@gmail.com</span>
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>+221 768250580</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Sénégal</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formulaire -->
+                <div class="col-lg-7">
+                    <form class="contact-form p-4" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Votre nom" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Votre email" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" placeholder="Sujet">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-dark w-100">Envoyer le message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Formulaire -->
-      <div class="col-lg-7">
-        <form class="contact-form p-4" id="contactForm">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="Votre nom" required>
+
+        <!-- footer -->
+        <footer class="footer">
+
+            <div class="footer-top">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <img src="images/logo1.jpg" alt="Forge Visuelle">
+                    <!-- <img src="images/taplink.png" alt="Forge Visuelle"> -->
+                    <p>
+                        Forge Visuelle est un studio créatif spécialisé en photographie,
+                        design graphique et direction artistique.
+                        Nous façonnons des images porteuses de sens, entre héritage
+                        culturel et vision contemporaine.
+                    </p>
+                </div>
+
+                <!-- Studio -->
+                <div>
+                    <h4>FORGE VISUELLE</h4>
+                    <ul>
+                        <li><a href="#propos">Qui sommes-nous ?</a></li>
+                        <li><a href="#vision">Notre vision</a></li>
+                        <li><a href="#services">Nos services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="#photographie">Photographie</a></li>
+                        <li><a href="#design">Design graphique</a></li>
+                        <li><a href="#design">Identité visuelle</a></li>
+                        <li><a href="#">Direction artistique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4>CONTACT</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Dakar, Sénégal
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            +221 76 825 05 80
+                        </li>
+                       
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            forgevisuelle@gmail.com
+                        </li>
+                        <div class="qr-code">
+                            <img src="images/taplink.png" alt="QR Code">
+                            <p>Scans le QR code</p>
+                        </div>
+                    </ul>
+                </div>
+
             </div>
-            <div class="col-md-6">
-              <input type="email" class="form-control" placeholder="Votre email" required>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <a href="https://www.instagram.com/forge_visuelle29?igsh=amR1ZWhwcWJhOWhk&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1CnGtRNxoX/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@forge_visuelle29?_r=1&_t=ZM-92KARaScIwK"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="col-12">
-              <input type="text" class="form-control" placeholder="Sujet">
+
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <span>© 2025 Forge Visuelle — Tous droits réservés</span>
+                <div>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
             </div>
-            <div class="col-12">
-              <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-dark w-100">Envoyer le message</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+
+        </footer>
+    </section>
 
 
 
 
 
 
-<!-- ================= WhatsApp Floating Button ================= -->
-<a href="https://wa.me/221768250580" target="_blank" class="whatsapp-float">
-  <i class="bi bi-whatsapp text-white"></i>
-</a>
+
+
+    <!-- ================= WhatsApp Floating Button ================= -->
+    <a href="https://wa.me/221768250580" target="_blank" class="whatsapp-float">
+        <i class="bi bi-whatsapp text-white"></i>
+    </a>
 
 
 
@@ -401,7 +534,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
         ScrollReveal().reveal('.btn-container', {
@@ -511,31 +644,32 @@
             });
         });
 
- (function(){
-    emailjs.init('XpD9T6NV8H_w0V3vz'); // 🔑 remplace par ta clé EmailJS
-  })();
+        (function () {
+            emailjs.init('XpD9T6NV8H_w0V3vz'); // 🔑 remplace par ta clé EmailJS
+        })();
 
 
 
-  const form = document.getElementById('contactForm');
+        const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const btn = form.querySelector('button');
-    btn.innerText = 'Envoi en cours…';
-    btn.disabled = true;
+            const btn = form.querySelector('button');
+            btn.innerText = 'Envoi en cours…';
+            btn.disabled = true;
 
-    emailjs.sendForm('service_4xpn7l4', 'template_rwk9dpw', this)
-      .then(() => {
-        btn.innerText = 'Message envoyé ✨';
-        form.reset();
-      })
-      .catch(() => {
-        btn.innerText = 'Erreur 😕 Réessayer';
-        btn.disabled = false;
-      });
-  });
+            emailjs.sendForm('service_4xpn7l4', 'template_rwk9dpw', this)
+                .then(() => {
+                    btn.innerText = 'Message envoyé ✨';
+                    form.reset();
+                })
+                .catch(() => {
+                    btn.innerText = 'Erreur 😕 Réessayer';
+                    btn.disabled = false;
+                });
+        });
+
 
 
     </script>
